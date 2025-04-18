@@ -1,0 +1,107 @@
+char choose;
+    system("cls");
+
+    cout << "This is Art Appreciation subject" << endl;
+    cout << "1. Take an exam" << endl;
+    cout << "2. Back" << endl;
+    cout << "Choose: ";
+    cin >> choose;
+
+    if (choose == '1') {
+        cout << "Exam's Starting, Goodluck..." << endl;
+        sleep(1.5);
+        system("cls");
+
+        // Questions & Answers
+        cout << "TAKE NOTE: CAPITAL LETTER ONLY " << endl;
+        const int NUM_QUESTIONS = 25;
+        string questions[NUM_QUESTIONS] = {
+		     "1.)who championed the 'art for art's sake' aesthetic?\nA.John Keats\nb.Bernard Shaw\nC.Lourdes Sanchez\nD.Oscar Wilde",
+		     "2.)Which value of art emphasizes improving the moral fiber of society?\nA.Aesthetic value\nB.Religious value\nC.Didactic value\nD.Historical value",
+		     "3.)What historical event is cited as an example of art with historical value?\nA.The publication of Noli Me Tangere\nB.The painting of the First Holy Mass at Limasawa\nC.The construction of a church during the Medieval Age\nD.The creation of a porcelain figure",
+		     "4.)Which artist's work is mentioned as an example of socio-political value?\nA.John Keats\nB.Oscar Wilde\nC.Jose Rizal\nD.Lourdes Sanchez",
+		     "5.)What is an example of pragmatic value, as described in the text?\nA.A painting that is aesthetically pleasing\nB.A painting that sells for a fortune\C.A porcelain figure used as a paperweight\nD.A painting that increases awareness of God",
+		     "6.)What type of value is present in art that informs us about the Earth, outer space, psychology, and numbers?\nA.Commercial value\nB.Scientific value\nC.Pragmatic value\nD.Didactic value",
+		     "7.)what were the Impressionists (Monet, Renoir, and Manet) primarily seeking to capture in their art?\A.The artist's conscious intentions and emotions\nB.The symbolic representation of human desires\nC.Immediate visual impressions, impersonally\nD.The unconscious drives and inhibitions of the artist",
+		     "8.)From a psychoanalytic perspective (Freud), how are human intentions manifested in art?\nA.Directly and explicitly in the artwork's subject matter\nB.Through conscious choices of color and composition\nC.As secondary manifestations, often symbolic\nD.Primarily through the artist's written statements",
+		     "9.)Psychoanalysis, as applied to art interpretation, suggests that the unearthing of what elements in the artwork may help in its interpretation?\nA.The artist's biography and life experiences\nB.Unconscious drives, desires, wishes, urges, depressions, and inhibitions\nC.The historical and social context of the artwork's creation\nD.The artist's conscious intentions and artistic techniques",
+		     "10.)what is the relationship between imitative and pleasurable qualities in art?\nA.They are mutually exclusive.\nB.They are often found together.\nC.Pleasure is only derived from non-imitative art.\nD.Imitative art is always superior to non-imitative art.",
+		     "11.)What does this perspective emphasize?\nA.The commercial value of art\nB.The educational function of art\nC. Art as an outlet for uncontrolled expression of energy\nD.The purely aesthetic aspects of art",
+		     "12.)From a psychoanalytic perspective (Freud), how are human intentions manifested in art?\nA.Directly and explicitly in the artwork's subject matter\nB.Through conscious choices of color and composition\C.As secondary manifestations, often symbolic\nD.Primarily through the artist's written statements",
+		     "13.) Can art appreciation be taught?\naA.Yes, it can be taught directly through specific techniques.\nB. No, it is solely based on innate talent and cannot be taught.\nC.It can be taught, but only indirectly through experience.\nD.It can be taught, but only through the study of art history.",
+		     "14.) What is the main point about explaining art?\nA.A complete explanation of a great painting is always possible.\nB. Explanations are unnecessary for appreciating art.\nC.Explaining art can sometimes do irreparable harm.\nD.The best explanations of art come from art critics",
+		     "15.) Which one is described as 'built into us as a part of our human legacy'?\nA.Secondary language\nB.Tertiary language\nC.Primary language\nD.Critical language",
+		     "16.) What happens to an artist's work if they ignore their connection to society and environment?\nA.Their work becomes more innovative and unique.\nB.Their work becomes irrelevant and unintelligible.\nC.Their work gains more popularity.\nD.Their work is unaffected",
+		     "17.)Which of the following factors are mentioned as influencing artists, according to their place of origin and ethnicity?\nA.Technological factors\nB.Religious factors\nC.Geographical factors\nD.Historical factors",
+		     "18.)What type of factors contribute to the development or change in art style, according to the text?\nA.Only religious factors\nB.Only political factors\nC.Political, psychological, and sociological factors\nD.Only historical factors",
+             "19.)Which religious movements are specifically mentioned as having influenced changes in art styles?\nA.Buddhism and Hinduism\nB.Christianity, the Counter-Reformation, and Humanism\nC.Islam and Judaism\nD.Confucianism and Taoism",
+             "20.)What is mentioned as a technological factor that produces new art forms?\nA.The invention of the printing press\nB.The development of new materials like plastic, plaster, and rubber\nC.The use of oil paints\nD.The rise of digital art",
+             "21.) Which of the following is NOT explicitly listed as an example?\nA.Venus\nB.Mona Lisa\nC.Saskia\nD.Michelangelo's David",
+             "22.)What is the approximate age of the earliest statues of women mentioned in the text?\nA.2000 B.C.\nB.20,000 B.C.\nC.25,000 B.C.\nD.10,000 B.C.",
+             "23.)Why is the Venus of Willendorf considered 'too small and ugly'?\nA.It does not meet modern standards of beauty.\nB.It is made of inferior materials.\nC.It lacks the idealized proportions of classical sculptures.\nD.It is an abstract and unconventional representation.",
+             "24.)What is the significance of the Venus of Willendorf's exaggerated features?\A.They reflect the artist's personal preferences.\nB.They represent the artist's skill in realistic portraiture.\nC.They are symbolic of fertility and the different stages of a woman's life.\nD.They were intended to be humorous or grotesque.",
+             "25.)The text describes Aphrodite as:\nA.A goddess of war and conflict\nB.The first lifelike statue that shows the female figure in three dimensions\nC.A goddess of the harvest and fertility\nD.A goddess of wisdom and justice",
+				};
+        char correctAnswers[NUM_QUESTIONS] = {'D', 'C', 'B','C','C','B','C','C','B','B','C','C','B','C','C','B','C','C','B','B','D','C','D','C','B'};
+        char userAnswers[NUM_QUESTIONS];
+
+        // Ask Questions and Store Answers
+        for (int i = 0; i < NUM_QUESTIONS; i++) {
+            cout << questions[i] << "\nAnswer: ";
+            cin >> userAnswers[i];
+            cout << "\n";
+        }
+
+        // Review and Edit Answers
+
+
+        char reviewChoice;
+        int qNum;
+        while (true) {
+
+            cout << "Would you like to change an answer? (Y = Yes || N = No): ";
+            cin >> reviewChoice;
+            if (reviewChoice == 'N' || reviewChoice == 'n') {
+                break;
+            } else if(reviewChoice == 'Y' || reviewChoice == 'y'){
+            cout << "Enter the question number to edit (1-" << NUM_QUESTIONS << "): ";
+            cin >> qNum;
+
+            if (qNum >= 1 && qNum <= NUM_QUESTIONS) {
+                cout << "\n" << questions[qNum - 1] << "\nNew Answer: ";
+                cin >> userAnswers[qNum - 1];
+            } else {
+                cout << "Invalid question number! Try again.\n";
+            }
+        }
+        else{
+        	cout << "Invalid choices!! Y = Yes || N = No" << endl;
+		}
+        }
+
+        // Calculate Score
+        for (int i = 0; i < NUM_QUESTIONS; i++) {
+            if (toupper(userAnswers[i]) == correctAnswers[i]) {
+                artapp_score++;
+            }
+        }
+
+        system("cls");
+        cout << "You completed the Science, Technology and Society exam\n";
+        cout << "Final Score: " << artapp_score << "/" << NUM_QUESTIONS << endl;
+        cout << "Please wait...";
+        sleep(3);
+        artapp_taken = true;
+        system("cls");
+        exitprog = false;
+        userpage();
+
+    } else if (choose == '2') {
+        cout << "Returning to Menu..." << endl;
+        system("cls");
+        sleep(1.5);
+        exitprog = false;
+        return;
+    } else {
+        cout << "INVALID, PLEASE CHOOSE 1 or 2" << endl;
+    }
